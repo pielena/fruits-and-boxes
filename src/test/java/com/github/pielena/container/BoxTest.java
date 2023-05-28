@@ -65,7 +65,7 @@ class BoxTest {
 
     @Test
     void should_throw_exception_when_transfer_fruits_into_null() {
-        Exception thrown = assertThrows(NullPointerException.class,
+        Exception thrown = assertThrows(IllegalArgumentException.class,
                 () -> fruitBox.transferFruits(null));
         assertEquals(thrown.getMessage(), "DestBox can't be null");
     }

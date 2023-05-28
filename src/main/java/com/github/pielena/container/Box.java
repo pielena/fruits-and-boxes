@@ -36,7 +36,7 @@ public class Box <T extends Fruit> {
 
     public void transferFruits(Box<? super T> destBox) {
         if (destBox == null) {
-            throw new NullPointerException("DestBox can't be null");
+            throw new IllegalArgumentException("DestBox can't be null");
         }
         if (destBox != this) {
             destBox.getFruits().addAll(fruits);
